@@ -38,7 +38,10 @@ class GitUsernameAppIndicator:
         GLib.timeout_add_seconds(2, self.handler_timeout)
 
     def get_git_su(self):
-        return commands.getstatusoutput("git config user.name")[1];
+        username = commands.getstatusoutput("git config user.name")[1]
+        if not username:
+            username = " --- not set ---"
+        return username
 
     def handler_timeout(self):
         self.update_git_su_status()
