@@ -8,9 +8,9 @@ import commands
 import sys
 import os
 
-try: 
-       from gi.repository import AppIndicator3 as AppIndicator  
-except:  
+try:
+       from gi.repository import AppIndicator3 as AppIndicator
+except:
        from gi.repository import AppIndicator
 
 import re
