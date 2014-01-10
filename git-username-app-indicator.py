@@ -40,7 +40,7 @@ class GitUsernameAppIndicator:
     def get_git_su(self):
         username = commands.getstatusoutput("git config user.name")[1]
         if not username:
-            username = " --- not set ---"
+            username = " --- git su not set ---"
         return username
 
     def handler_timeout(self):
