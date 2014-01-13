@@ -48,7 +48,7 @@ class GitUsernameAppIndicator:
         return True
 
     def update_git_su_status(self):
-        self.ind.set_label(' ' + self.get_git_su(), "40 character limit .....................")
+        self.ind.set_label(' ' + self.get_git_su()[:40], "40 character limit .....................")
 
     def main(self):
         Gtk.main()
